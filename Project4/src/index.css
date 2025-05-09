@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* reset.css or in App.css */
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+@layer utilities {
+  @keyframes move-right-to-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes slide-loop {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes slide-loop-reverse {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  .animate-move-right-to-left {
+    animation: move-right-to-left 8s linear infinite;
+  }
+}
